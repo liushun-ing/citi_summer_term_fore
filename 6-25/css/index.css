@@ -1,0 +1,262 @@
+body {
+  background-color: #10161d;
+  padding: 40px 60px;
+  font-family: sans-serif;
+}
+
+/* 第一个标签栏 */
+.tabs-wrapper {
+  width: 262px;
+  height: 32px;
+  background-color: rgba(61, 86, 111, 0.4);
+  border-radius: 4px;
+  margin-bottom: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tab-item {
+  width: 150px;
+  color: #80aff8;
+  padding: 5px 18px;
+  font-size: 12px;
+  text-align: center;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+.tab-item:last-child {
+  width: 110px;
+}
+
+.tab-item.active {
+  color: #19232e;
+  border: 1px solid rgba(255, 255, 255, 0);
+  border-radius: 4px;
+  background-color: #e9eef3;
+}
+
+.hidden-class {
+  display: none;
+}
+
+/* 一系列的输入框 */
+.action-div {
+  height: 116px;
+  transition-property: height;
+  transition-duration: 1s;
+}
+
+.action-wrapper {
+  display: flex;
+  align-items: flex-end;
+  width: 100%;
+}
+
+.action-left {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.action-right {
+  /* 该属性默认是1，当空间不足时会被压缩 */
+  flex-shrink: 0;
+  width: 200px;
+}
+
+.action-item {
+  margin-right: 20px;
+  margin-bottom: 10px;
+}
+
+.action-label {
+  font-size: 12px;
+  color: #d9e2ea;
+}
+
+.action-input {
+  box-sizing: border-box;
+  height: 32px;
+  width: 160px;
+  color: #ffffff;
+  border: 1px solid #46637f;
+  border-radius: 4px;
+  background-color: #17202a;
+}
+
+.action-input-nlp {
+  box-sizing: border-box;
+  height: 32px;
+  width: 220px;
+  color: #ffffff;
+  border: 1px solid #46637f;
+  border-radius: 4px;
+  background-color: #17202a;
+}
+
+.action-button {
+  width: 80px;
+  height: 32px;
+  color: #000000;
+  font-size: 14px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+  border: 1px solid rgba(255, 255, 255, 0);
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.action-button:last-child {
+  margin-left: 20px;
+}
+
+.button-sell {
+  background-color: #ffcd00;
+}
+
+.button-buy {
+  background-color: #00b755;
+}
+
+.button-nlp {
+  width: 80px;
+  height: 32px;
+  color: #000000;
+  font-size: 14px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+  border: 1px solid rgba(255, 255, 255, 0);
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: #015ea7;
+}
+
+/* 分割线 */
+.separate-line {
+  height: 1px;
+  margin: 20px 0 30px 0;
+  box-sizing: border-box;
+  border-top: 1px solid #3b3d4e;
+}
+
+/* 第二个标签栏 */
+.tabs-wrapper-1 {
+  width: 322px;
+  height: 32px;
+  background-color: rgba(61, 86, 111, 0.4);
+  border-radius: 4px;
+  margin-bottom: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tab-item-1 {
+  width: 40px;
+  line-height: 24px;
+  height: 24px;
+  color: #80aff8;
+  vertical-align: middle;
+  font-size: 12px;
+  text-align: center;
+  cursor: pointer;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.tab-item-1::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 4px;
+  box-sizing: border-box;
+  height: 16px;
+  width: 1px;
+  background-color: #34495f;
+  border: 1px solid #34495f;
+}
+
+.tab-item-1.active {
+  color: #19232e;
+  border: 1px solid rgba(255, 255, 255, 0);
+  border-radius: 4px;
+  background-color: #e9eef3;
+}
+
+/* +表示第一个兄弟节点 */
+.tab-item-1:first-child::before, .tab-item-1.active::before, .tab-item-1.active + .tab-item-1::before {
+  display: none;
+}
+
+
+/* 表格 */
+.table-wrapper {
+  background-color: #17202a;
+}
+
+table {
+  border-collapse: collapse;
+  color: #d9e2ea;
+  font-size: 12px;
+}
+
+td, th {
+  border: 1px solid #46637f;
+  text-align: left;
+  width: 150px;
+  height: 37px;
+  padding: 8px;
+  box-sizing: border-box;
+}
+
+th {
+  background-color: #2b3d4e;
+  font-weight: bold;
+}
+
+
+/* 底部数据 */
+.data-wrapper{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  height: 36px;
+  font-size: 14px;
+  color: #ffffff;
+}
+
+.data-item {
+  margin-right: 20px;
+}
+
+.data-red {
+  color: #ff7a75;
+}
+
+.data-green {
+  color: #00ea6c;
+}
+
+.data-blue {
+  color: #97afc6;
+}
+
+.data-records {
+  color: #80aff8;
+}
+
+.flow-analysis {
+  margin-top: 40px;
+  background-color: #17202a;
+  border-radius: 4px;
+  box-shadow: 0 0 2px 1px #000000 ;
+}
+
+.flow-tip {
+  padding: 10px 0 0 10px;
+  color: #ffffff;
+  font-family: sans-serif;
+}
+

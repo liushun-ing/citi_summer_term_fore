@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <script src="https://cdn.highcharts.com.cn/highcharts/highcharts.js"></script>
+  <script src="https://cdn.highcharts.com.cn/highcharts/modules/exporting.js"></script>
+  <script src="https://img.hcharts.cn/highcharts-plugins/highcharts-zh_CN.js"></script>
+
+  <title>Document</title>
+</head>
+<body>
+  <div class="tabs-wrapper">
+    <div data-value="tra" class="tab-item active">Traditional Trade</div>
+    <div data-value="nlp" class="tab-item">NLP Trade</div>
+  </div>
+
+  <div class="action-div">
+    <div class="action0">
+      <div class="action-wrapper">
+        <div class="action-left">
+          <div class="action-item">
+            <div class="action-label">Client Name</div>
+            <input class="action-input" type="text" name="clientName" placeholder="text input">
+          </div>
+          <div class="action-item">
+            <div class="action-label">Ticker</div>
+            <input class="action-input" type="text" name="tiker" placeholder="text input">
+          </div>
+          <div class="action-item">
+            <div class="action-label">RIC</div>
+            <input class="action-input" type="text" name="ric" placeholder="text input">
+          </div>
+          <div class="action-item">
+            <div class="action-label">Size</div>
+            <input class="action-input" type="text" name="size" placeholder="text input">
+          </div>
+          <div class="action-item">
+            <div class="action-label">Price</div>
+            <input class="action-input" type="text" name="price" placeholder="text input">
+          </div>
+          <div class="action-item">
+            <div class="action-label">Currency</div>
+            <input class="action-input" type="text" name="currency" placeholder="text input">
+          </div>
+          <div class="action-item">
+            <div class="action-label">Issuer Sector</div>
+            <input class="action-input" type="text" name="issuerSector" placeholder="text input">
+          </div>
+          <div class="action-item">
+            <div class="action-label">Salesperson</div>
+            <input class="action-input" type="text" name="salesPerson" placeholder="text input">
+          </div>      
+          <div class="action-item">
+            <div class="action-label">HT/PT</div>
+            <select name="type" class="action-input">
+              <option value="select">--select--</option>
+              <option value="HT">HT</option>
+              <option value="PT">PT</option>
+            </select>
+          </div>    
+        </div>
+        <div class="action-right">
+          <button class="action-button button-buy">buy</button>
+          <button class="action-button button-sell">sale</button>            
+        </div>
+      </div>
+    </div>
+    <div class="action1 hidden-class">
+      <div class="action-wrapper">
+        <div class="action-item">
+          <div class="action-label">NLP Trade</div>
+          <input class="action-input-nlp" type="text" name="nlpWords" placeholder="text input">
+        </div>
+        <button class="button-nlp">GO</button>        
+      </div>
+    </div>
+  </div>
+
+  <div class="separate-line"></div>
+
+  <div class="tabs-wrapper-1">
+    <div data-value="0" class="tab-item-1 active">1D</div>
+    <div data-value="1" class="tab-item-1">1W</div>
+    <div data-value="2" class="tab-item-1">2W</div>
+    <div data-value="3" class="tab-item-1">1M</div>
+    <div data-value="4" class="tab-item-1">3M</div>
+    <div data-value="5" class="tab-item-1">6M</div>
+    <div data-value="6" class="tab-item-1">1Y</div>
+    <div data-value="7" class="tab-item-1">YTD</div>
+  </div>
+
+  <div class="table-wrapper">
+    <table>
+      <tr>
+        <th>Date</th>
+        <th>Client Name</th>
+        <th>Client Side</th>
+        <th>Ticker</th>
+        <th>RIC</th>
+        <th>Size</th>
+        <th>Prize</th>
+        <th>National USD</th>
+        <th>Currency</th>
+        <th>Issuer Sector</th>
+        <th>Salesperson</th>
+        <th>HT/PT</th>
+      </tr>
+    </table>    
+    <div class="data-wrapper">
+      <div id="data-items">
+        <span class="data-item"></span>
+        <span class="data-item"></span>
+        <span class="data-item"></span>
+        <span class="data-item"></span>
+        <span class="data-item"></span>
+        <span class="data-item"></span>        
+      </div>
+      <div>
+        <span class="data-records"></span>
+      </div>
+    </div>
+  </div>
+
+  <div class="flow-analysis">
+    <div class="flow-tip">Flow Analysis</div>
+    <div id="container"></div>
+  </div>
+  
+
+</body>
+<!-- <script src="./index.js" type="module"></script> -->
+</html>

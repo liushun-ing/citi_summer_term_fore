@@ -1,0 +1,67 @@
+{
+  "dataList": [
+    {
+      "Date": "2022-06-20",
+      "Client Name": "Bob",
+      "Client Side": "Buy",
+      "Ticker": "阿里巴巴",
+      "RIC": "082322",
+      "Size": 1000,
+      "Prize": 231.2,
+      "National US": 1203.2,
+      "Currency": "RMB",
+      "Issuer Sector": "互联网",
+      "Salesperson": "Jack",
+      "HT/PT": "HT"
+    },
+    {
+      "Date": "2022-06-25",
+      "Client Name": "Alice",
+      "Client Side": "Sell",
+      "Ticker": "微软",
+      "RIC": "082322",
+      "Size": 1000,
+      "Prize": 231.2,
+      "National US": 1203.2,
+      "Currency": "RMB",
+      "Issuer Sector": "互联网",
+      "Salesperson": "Jack",
+      "HT/PT": "HT"
+    },
+    {
+      "Date": "2022-06-20",
+      "Client Name": "Bob",
+      "Client Side": "Buy",
+      "Ticker": "百度",
+      "RIC": "082322",
+      "Size": 1000,
+      "Prize": 231.2,
+      "National US": 1203.2,
+      "Currency": "RMB",
+      "Issuer Sector": "互联网",
+      "Salesperson": "Jack",
+      "HT/PT": "HT"
+    },
+    {
+      "Date": "2022-06-30",
+      "Client Name": "Bob",
+      "Client Side": "Sell",
+      "Ticker": "阿里巴巴",
+      "RIC": "082322",
+      "Size": 1000,
+      "Prize": 231.2,
+      "National US": 1203.2,
+      "Currency": "RMB",
+      "Issuer Sector": "互联网",
+      "Salesperson": "Juice",
+      "HT/PT": "PT"
+    }
+  ],
+  "total": 4,
+  "totalBuy": 1000,
+  "totalSell": 2000,
+  "netQuantity": -1200,
+  "totalBuyNational": 1200.3,
+  "totalSellNational": 1223.02,
+  "netNational": 2132.4
+}
