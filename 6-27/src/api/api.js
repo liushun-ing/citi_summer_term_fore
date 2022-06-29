@@ -1,17 +1,17 @@
 import fetcher from "./fetch.js";
 
 const api = {
-  getData: () => {
+  getTable1Data: () => {
     return fetcher({
-      url: "/6-24/assets/data.json",
+      url: "/assets/table1.json",
       method: "GET",
       params: {},
     });
   },
 
-  getData1: () => {
+  getTable2Data: () => {
     return fetcher({
-      url: "/6-24/assets/data1.json",
+      url: "/assets/table2.json",
       method: "GET",
       params: {},
     });
@@ -19,7 +19,7 @@ const api = {
 
   buyStock: (params) => {
     return fetcher({
-      url: "/6-24/assets/buyStock",
+      url: "/buyStock",
       method: "POST",
       params: params,
     });
@@ -27,7 +27,7 @@ const api = {
 
   sellStock: (params) => {
     return fetcher({
-      url: "/6-24/assets/sellStock",
+      url: "/sellStock",
       method: "POST",
       params: params,
     });
@@ -35,11 +35,19 @@ const api = {
   
   nlp: (params) => {
     return fetcher({
-      url: "/6-24/assets/nlp",
+      url: "/nlp",
       method: "POST",
       params: params,
     });
   },
+
+  getChartData: () => {
+    return fetcher({
+      url: "/assets/chart.json",
+      method: "GET",
+      params: {},
+    });
+  }
 };
 
 export default api;
