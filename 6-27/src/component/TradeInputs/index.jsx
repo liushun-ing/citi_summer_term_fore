@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import api from "../../api/api.js";
+import util from "../../utils/util.js";
 import "./index.css";
 
 const labels = [
@@ -50,7 +51,7 @@ export default function TradeInputs() {
   }
 
   async function buyStockHandler() {
-    if (Object.keys(dealForm).length < 9) {
+    if (util.isNotEmpty(dealForm)) {
       alert("信息不完整");
     } else {
       try {
@@ -79,7 +80,7 @@ export default function TradeInputs() {
   }
 
   async function sellStockHandler() {
-    if (Object.keys(dealForm).length < 9) {
+    if (util.isNotEmpty(dealForm)) {
       alert("信息不完整");
     } else {
       try {

@@ -16,6 +16,15 @@ const getTableData = async (selected) => {
   }
 };
 
+const isNotEmpty = (form) => {
+  for (let key in Object.keys(form)) {
+    if (form[key] == "") {
+      return false;
+    }
+  }
+  return true;
+};
+
 const formatTime = (dateString) => {
   const date = new Date(dateString);
   const year = date.getFullYear();
@@ -37,4 +46,5 @@ const formatNumber = (n) => {
 export default {
   formatTime,
   getTableData,
+  isNotEmpty,
 };
