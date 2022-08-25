@@ -26,7 +26,7 @@ nodejs_server
 
 ```
 首先进入nodejs_server文件夹，执行以下命令
-nodejs server.js
+node server.js
 
 然后，进入6-27文件夹，执行以下命令
 npm install

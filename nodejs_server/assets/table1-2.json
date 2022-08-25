@@ -1,0 +1,41 @@
+{
+  "dataList": [
+    {
+      "id": 3,
+      "date": "2022-08-11",
+      "clientName": "Jack",
+      "clientSide": "Buy",
+      "ticker": "大家就拉上",
+      "ric": "082322",
+      "size": 1000,
+      "prize": 231.2,
+      "nationalUsd": 1203.2,
+      "currency": "RMB",
+      "issuerSector": "互联网",
+      "salesperson": "Jack",
+      "type": "HT"
+    },
+    {
+      "id": 4,
+      "date": "2022-06-30",
+      "clientName": "Mark",
+      "clientSide": "Sell",
+      "ticker": "把促销欧式空",
+      "ric": "43242",
+      "size": 1036500,
+      "prize": 231.2,
+      "nationalUsd": 120334.2,
+      "currency": "RMB",
+      "issuerSector": "的哈岁的网",
+      "salesperson": "dsadfgh",
+      "type": "PT"
+    }
+  ],
+  "total": 4,
+  "totalBuy": 2000,
+  "totalSell": 3000,
+  "netQuantity": -1500,
+  "totalBuyNational": 1260.3,
+  "totalSellNational": 1223.02,
+  "netNational": 1232.4
+}

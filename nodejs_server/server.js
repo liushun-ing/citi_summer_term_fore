@@ -20,23 +20,42 @@ server.on("request", (req, res) => {
     code: 2000
   };
 
-  if (req.url == "/assets/table1.json") {
-    fs.readFile("./assets/table1.json", function (err, data) {
-      //data -buffer类型数据 （底层二进制数据）
-      if (!err) {
-        res.write(data.toString());
-        res.end();
+  if (req.url.includes("/getTableData")) {
+    console.log(req.url)
+    const querys = req.url.substring(req.url.indexOf('?')+1).split('&');
+    const query = {}
+    querys.forEach(item => {
+      s = item.split('=')
+      query[`${s[0]}`] = s[1];
+    })
+    if(query.fre % 2 == 0) {
+      if(query.currentPage == 1) {
+        fs.readFile("./assets/table1-1.json", function (err, data) {
+          //data -buffer类型数据 （底层二进制数据）
+          if (!err) {
+            res.write(data.toString());
+            res.end();
+          }
+        });             
+      } else {
+        fs.readFile("./assets/table1-2.json", function (err, data) {
+          //data -buffer类型数据 （底层二进制数据）
+          if (!err) {
+            res.write(data.toString());
+            res.end();
+          }
+        });    
       }
-    });
-  } else if (req.url == "/assets/table2.json") {
-    fs.readFile("./assets/table2.json", function (err, data) {
-      //data -buffer类型数据 （底层二进制数据）
-      if (!err) {
-        res.write(data.toString());
-        res.end();
-      }
-    });
-  } else if (req.url == "/assets/chart.json") {
+    } else {
+      fs.readFile("./assets/table2.json", function (err, data) {
+        //data -buffer类型数据 （底层二进制数据）
+        if (!err) {
+          res.write(data.toString());
+          res.end();
+        }
+      });      
+    }
+  } else if (req.url == "/getChartData") {
     fs.readFile("./assets/chart.json", function (err, data) {
       //data -buffer类型数据 （底层二进制数据）
       if (!err) {
