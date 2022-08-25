@@ -55,7 +55,6 @@ export default function Table(props) {
                 <SummaryItem label="Net Notional" value={summary.netNotional} className='net-notional' />
                 <SummaryItem label="Total Records" value={tableData.length} className='records' />
             </div>
-
         </div>
     </div>
 }

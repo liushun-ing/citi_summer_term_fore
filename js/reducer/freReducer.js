@@ -10,6 +10,6 @@ const freReducer = createSlice({
     }
 })
 
-export const {setFrequency} = freReducer.actions
+export const { setFrequency } = freReducer.actions
 
 export default freReducer.reducer
