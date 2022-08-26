@@ -8,7 +8,10 @@ module.exports={
         filename:'main.js',
         path:path.resolve(__dirname,'dist'),
     },
+<<<<<<< HEAD
     // mode:devMode?'development':'production',
+=======
+>>>>>>> c85d8ed8af4e254b532e36e75f91d1f2f0c56f72
     devtool:'inline-source-map',
     devServer:{
         static:'./dist',
