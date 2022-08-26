@@ -23,7 +23,7 @@ export default function TradeType(props) {
         let pre = ""
         if (ITEMS[0].value === cur) pre = ITEMS[1].value
         else pre = ITEMS[0].value
-        /**下面这一句是干啥的 */
+        
         if (selectType) {
             selectType(pre, cur)
         }

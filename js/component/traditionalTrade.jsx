@@ -21,7 +21,6 @@ export default function TraditionalTrade(props) {
 
     function onClickHandler(evt) {
         const tradeE1 = evt.target.className
-        //0买1卖
         if (tradeE1 === "trade-btn trade-buy") tradePost.flag = 0
         else if (tradeE1 === "trade-btn trade-sell") tradePost.flag = 1
         console.log("tradePost", tradePost)
