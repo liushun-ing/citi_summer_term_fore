@@ -9,17 +9,18 @@ module.exports = {
   },
   devtool: "inline-source-map",
   devServer: {
+    historyApiFallback: true,
     static: "./dist",
     compress: true,
     liveReload: false,
     open: true,
     port: 8080,
     hot: true,
-    proxy: {
-      "/": {
-        target: "http://localhost:5500",
-      },
-    },
+    // proxy: {
+    //   "/": {
+    //     target: "http://localhost:5500",
+    //   },
+    // },
   },
   watchOptions: {
     aggregateTimeout: 300,

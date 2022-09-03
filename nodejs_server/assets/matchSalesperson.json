@@ -1,0 +1,28 @@
+{
+  "code": 2000,
+  "msg": "success",
+  "data": {
+    "salespersonList": [
+      {
+        "salespersonId": 1,
+        "salespersonName": "1号人员"
+      },
+      {
+        "salespersonId": 2,
+        "salespersonName": "2号人员"
+      },
+      {
+        "salespersonId": 3,
+        "salespersonName": "3号人员"
+      },
+      {
+        "salespersonId": 4,
+        "salespersonName": "4号人员"
+      },
+      {
+        "salespersonId": 5,
+        "salespersonName": "5号人员"
+      }
+    ]
+  }
+}

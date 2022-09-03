@@ -1,55 +1,13 @@
 import React, { useState } from "react";
 import "./index.css";
 import TabItem from "../TabItem";
-
-const TAB_ITEMS = [
-  {
-    label: 0,
-    value: "1D",
-    active: false,
-  },
-  {
-    label: 1,
-    value: "1W",
-    active: false,
-  },
-  {
-    label: 2,
-    value: "2W",
-    active: false,
-  },
-  {
-    label: 3,
-    value: "1M",
-    active: false,
-  },
-  {
-    label: 4,
-    value: "3M",
-    active: false,
-  },
-  {
-    label: 5,
-    value: "6M",
-    active: false,
-  },
-  {
-    label: 6,
-    value: "1Y",
-    active: false,
-  },
-  {
-    label: 7,
-    value: "YTD",
-    active: false,
-  },
-];
+import constants from "../../utils/constants";
 
 export default function SecondTabs(props) {
   const { fre, selectFre } = props;
 
   const [tabItems, setTabItems] = useState(
-    TAB_ITEMS.map((item) => {
+    constants.TAB_ITEMS.map((item) => {
       if (item.label == fre) {
         item.active = true;
       } else {

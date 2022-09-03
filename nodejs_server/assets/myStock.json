@@ -1,0 +1,79 @@
+{
+  "code": 2000,
+  "msg": "success",
+  "data": {
+    "dataList": [
+      {
+        "key": "1",
+        "tickerName": "Tecent",
+        "ric": "AX120154",
+        "price": 10.5,
+        "issuerSector": "New York No. 1 Sector",
+        "salesPerson": "Bob",
+        "holdNumber": 150,
+        "type": "HT"
+      },
+      {
+        "key": "2",
+        "tickerName": "MiHaYou",
+        "ric": "XS120154",
+        "price": 8.5,
+        "issuerSector": "New York No. 1 Lake Sector",
+        "salesPerson": "Bob",
+        "holdNumber": 150,
+        "type": "HT"
+      },
+      {
+        "key": "3",
+        "tickerName": "ALibaba",
+        "ric": "QD120154",
+        "price": 11.5,
+        "issuerSector": "New York No. 1 Lake Park",
+        "salesPerson": "Tom",
+        "holdNumber": 300,
+        "type": "HT"
+      },
+      {
+        "key": "4",
+        "tickerName": "Baidu",
+        "ric": "RS120154",
+        "price": 14.5,
+        "issuerSector": "New York No. 1 Lake Park",
+        "salesPerson": "Tom",
+        "holdNumber": 300,
+        "type": "PT"
+      },
+      {
+        "key": "5",
+        "tickerName": "Baidu",
+        "ric": "RS120154",
+        "price": 13.5,
+        "issuerSector": "New York No. 1 Lake Park",
+        "salesPerson": "Dobby",
+        "holdNumber": 300,
+        "type": "HT"
+      },
+      {
+        "key": "6",
+        "tickerName": "Tecent",
+        "ric": "AX120154",
+        "price": 10.5,
+        "issuerSector": "New York No. 1 Sector",
+        "salesPerson": "Bob",
+        "holdNumber": 150,
+        "type": "HT"
+      },
+      {
+        "key": "7",
+        "tickerName": "MiHaYou",
+        "ric": "XS120154",
+        "price": 8.5,
+        "issuerSector": "New York No. 1 Lake Sector",
+        "salesPerson": "Bob",
+        "holdNumber": 150,
+        "type": "HT"
+      }
+    ],
+    "total": 7
+  }
+}

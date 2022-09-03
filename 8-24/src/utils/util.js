@@ -11,6 +11,21 @@ const existEmptyProperty = (form) => {
 };
 
 /**
+ * 更新labels,提示用户输入
+ */
+const updateLabels = (labels, form) => {
+  let newLabels = labels.map((item) => {
+    if (!form[item[1]]) {
+      item[2] = true;
+    } else {
+      item[2] = false;
+    }
+    return item;
+  });
+  return newLabels;
+};
+
+/**
  * 格式化时间
  */
 const formatTime = (dateString) => {
@@ -84,6 +99,7 @@ const filterTableData = (originTableData, field, mode) => {
 
 export default {
   formatTime,
+  updateLabels,
   existEmptyProperty,
   sortTableData,
   filterTableData,

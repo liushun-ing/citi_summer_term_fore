@@ -1,4 +1,5 @@
 export const CHART_OPTIONS = (dateSeries, buySeries, sellSeries) => {
+  // 计算折线图数据
   let cumulationSeries = Array.from(buySeries);
   for (let i = 0; i < buySeries.length; i++) {
     cumulationSeries[i] += sellSeries[i];
@@ -16,6 +17,7 @@ export const CHART_OPTIONS = (dateSeries, buySeries, sellSeries) => {
         color: "#ffffff",
       },
     },
+    // 标签
     labels: {
       items: [
         {
@@ -143,6 +145,7 @@ export const CHART_OPTIONS = (dateSeries, buySeries, sellSeries) => {
       },
       backgroundColor: "transparent",
     },
+    // 数据
     series: [
       {
         name: "Buy",

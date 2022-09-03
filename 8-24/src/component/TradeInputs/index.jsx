@@ -4,22 +4,14 @@ import { message } from "antd";
 import api from "../../api/api.js";
 import util from "../../utils/util.js";
 import "./index.css";
-
-const labels = [
-  ["Client name", "clientName"],
-  ["Ticker", "ticker"],
-  ["RIC", "ric"],
-  ["Size", "size"],
-  ["Price", "price"],
-  ["Currency", "currency"],
-  ["Issuer Sector", "issuerSector"],
-  ["Salesperson", "salesperson"],
-];
+import constants from "../../utils/constants.js";
 
 export default function TradeInputs() {
   let selectedMode = useSelector((state) => state.mode.value);
 
   const [nlpWords, setNlpWords] = useState("");
+  const [labels, setLabels] = useState(constants.INPUT_LABELS);
+  const [selectState, setSelectState] = useState(false);
   const [dealForm, setDealForm] = useState({
     clientName: "",
     ticker: "",
@@ -50,6 +42,12 @@ export default function TradeInputs() {
   }
 
   async function buyStockHandler() {
+    setLabels(util.updateLabels(labels, dealForm));
+    if (dealForm[`type`]) {
+      setSelectState(false);
+    } else {
+      setSelectState(true);
+    }
     if (util.existEmptyProperty(dealForm)) {
       message.warn("信息不完整");
     } else {
@@ -79,6 +77,12 @@ export default function TradeInputs() {
   }
 
   async function sellStockHandler() {
+    if (dealForm[`type`]) {
+      setSelectState(false);
+    } else {
+      setSelectState(true);
+    }
+    setLabels(util.updateLabels(labels, dealForm));
     if (util.existEmptyProperty(dealForm)) {
       message.warn("信息不完整");
     } else {
@@ -130,10 +134,7 @@ export default function TradeInputs() {
 
   return (
     <div>
-      <div
-        className="action-div"
-        style={{ height: selectedMode == 0 ? "130px" : "70px" }}
-      >
+      <div className="action-div">
         <div className={selectedMode == 0 ? "action0" : "action0 hidden-class"}>
           <div className="action-wrapper">
             <div className="action-left">
@@ -148,6 +149,9 @@ export default function TradeInputs() {
                     placeholder="text input"
                     onChange={inputHandler}
                   />
+                  <div className={item[2] ? "error-class" : "visible-class"}>
+                    请输入信息
+                  </div>
                 </div>
               ))}
               <div className="action-item">
@@ -162,6 +166,9 @@ export default function TradeInputs() {
                   <option value="HT">HT</option>
                   <option value="PT">PT</option>
                 </select>
+                <div className={selectState ? "error-class" : "visible-class"}>
+                  请选择类型
+                </div>
               </div>
             </div>
             <div className="action-right">

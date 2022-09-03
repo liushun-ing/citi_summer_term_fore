@@ -1,0 +1,11 @@
+{
+  "code": 2000,
+  "msg": "success",
+  "data": {
+    "clientInfo": {
+      "clientId": "12345678",
+      "clientName": "123",
+      "registerTime": "2022-08-30 12:12:12"
+    }
+  }
+}

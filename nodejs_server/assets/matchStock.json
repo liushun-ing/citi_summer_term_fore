@@ -1,0 +1,15 @@
+{
+  "code": 2000,
+  "msg": "success",
+  "data": {
+    "stock": {
+      "stockId": 123,
+      "ric": "083271",
+      "ticker": "阿里巴巴",
+      "issuerSector": "互联网",
+      "currency": "RMB",
+      "price": 123.3,
+      "nationalUsd": 1321.3
+    }
+  }
+}
